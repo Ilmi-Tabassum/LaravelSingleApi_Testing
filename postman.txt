@@ -1,0 +1,67 @@
+//-----------POST---------------------//
+http://127.0.0.1:8000/api/add-employee
+
+{
+    "name" :"Ilmi Tabassum",
+    "email" : "ilmi@gmail.com",
+    "phone_no" : "1707",
+    "gender": "male",
+    "age" : "30"
+}
+//-------------------GET----------------------//
+
+http://127.0.0.1:8000/api/list-employees
+
+@@@@@@@@@@OutPut@@@@@@@@@@@@@@@
+{
+    "status": 1,
+    "message": "Listing employees",
+    "data": [
+        {
+            "id": 1,
+            "name": "Ilmi Tabassum",
+            "email": "ilmi@gmail.com",
+            "phone_num": 1305291707,
+            "gender": "male",
+            "age": 30,
+            "created_at": "2021-12-02T10:08:03.000000Z",
+            "updated_at": "2021-12-02T10:08:03.000000Z"
+        }
+    ]
+}
+
+//====================GET Single Employees (By ID)=========================//
+http://127.0.0.1:8000/api/single-employees/1  ((HTTP code:  404))
+
+@@@@@@@@@@OutPut@@@@@@@@@@@@@@@
+
+{
+    "status": 1,
+    "message": "Employee found",
+    "data": {
+        "id": 1,
+        "name": "Ilmi Tabassum",
+        "email": "ilmi@gmail.com",
+        "phone_num": 1305291707,
+        "gender": "male",
+        "age": 30,
+        "created_at": "2021-12-02T10:08:03.000000Z",
+        "updated_at": "2021-12-02T10:08:03.000000Z"
+    }
+}
+
+//===============updateEmployee===========//
+
+PUT == http://127.0.0.1:8000/api/update-employee/1
+
+@@@@@@@@@@OutPut@@@@@@@@@@@@@@@
+
+{
+    "name" :"Tabassum",
+    "email" : "ilmi@gmail.com",
+    "phone_no" : "1707",
+    "gender": "male",
+    "age" : "25"
+}
+
+
